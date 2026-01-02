@@ -35,3 +35,10 @@ yarn-error.log*
 next-env.d.ts
 
 *.zip
+
+# Sensitive config files
+domain-contact.json
+convert-smtp.py
+*-policy.json
+ses-*.json
+*-dns*.json
