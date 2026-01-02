@@ -82,11 +82,11 @@ export function CTA() {
           </Link>
           <span className="hidden sm:block text-white/20">|</span>
           <Link
-            href="mailto:hello@vgac.ai"
+            href="mailto:aespira@vgac.cloud"
             className="flex items-center gap-2 text-white/60 hover:text-electric-400 transition-colors"
           >
             <Mail size={18} />
-            <span>hello@vgac.ai</span>
+            <span>aespira@vgac.cloud</span>
           </Link>
         </motion.div>
       </div>

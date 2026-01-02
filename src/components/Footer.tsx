@@ -31,9 +31,9 @@ const footerLinks = {
 
 const socialLinks = [
   { icon: Twitter, href: "https://twitter.com/vgac_ai", label: "Twitter" },
-  { icon: Github, href: "https://github.com/vgac", label: "GitHub" },
-  { icon: Linkedin, href: "https://linkedin.com/company/vgac", label: "LinkedIn" },
-  { icon: Mail, href: "mailto:hello@vgac.ai", label: "Email" },
+  { icon: Github, href: "https://github.com/espirado", label: "GitHub" },
+  { icon: Linkedin, href: "https://linkedin.com/in/andrew-espira", label: "LinkedIn" },
+  { icon: Mail, href: "mailto:aespira@vgac.cloud", label: "Email" },
 ];
 
 export function Footer() {
