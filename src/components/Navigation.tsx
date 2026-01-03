@@ -6,13 +6,13 @@ import { Menu, X } from "lucide-react";
 import Link from "next/link";
 
 const navLinks = [
-  { name: "Problem", href: "#problem" },
-  { name: "Solution", href: "#solution" },
-  { name: "How It Works", href: "#how-it-works" },
-  { name: "Use Cases", href: "#use-cases" },
-  { name: "Blog", href: "#blog" },
-  { name: "Team", href: "#team" },
-  { name: "Investors", href: "#investors" },
+  { name: "Problem", href: "/#problem" },
+  { name: "Solution", href: "/#solution" },
+  { name: "How It Works", href: "/#how-it-works" },
+  { name: "Use Cases", href: "/#use-cases" },
+  { name: "Blog", href: "/blog" },
+  { name: "Team", href: "/#team" },
+  { name: "Investors", href: "/#investors" },
 ];
 
 export function Navigation() {
@@ -71,13 +71,13 @@ export function Navigation() {
             {/* CTA Buttons */}
             <div className="hidden lg:flex items-center gap-4">
               <Link
-                href="#demo"
+                href="/#contact"
                 className="text-sm text-white/80 hover:text-white transition-colors font-medium"
               >
                 Request Demo
               </Link>
               <Link
-                href="#contact"
+                href="/#contact"
                 className="px-5 py-2.5 bg-electric-400 text-midnight-900 font-display font-semibold text-sm rounded-lg hover:bg-electric-500 transition-all hover:scale-105 hover:shadow-lg hover:shadow-electric-400/30"
               >
                 Get Started
@@ -128,7 +128,8 @@ export function Navigation() {
                 className="pt-6 border-t border-white/10"
               >
                 <Link
-                  href="#contact"
+                  href="/#contact"
+                  onClick={() => setIsMobileMenuOpen(false)}
                   className="block w-full py-4 bg-electric-400 text-midnight-900 font-display font-bold text-center text-lg rounded-lg"
                 >
                   Get Started
