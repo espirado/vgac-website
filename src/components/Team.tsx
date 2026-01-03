@@ -14,7 +14,7 @@ const teamMembers = [
   {
     name: "Andrew Espira",
     role: "Founder & Lead Engineer",
-    bio: "Platform engineer with 8+ years building cloud-native systems at scale. Previously SRE at Sportserve (99.9% uptime on sports data services), Research Software Engineer at EcoHealth Alliance (GPU clusters for ML workloads), and founding engineer at Kustode. Deep expertise in GPU resource management, Kubernetes scheduling, and observability systems.",
+    bio: "Platform engineer with 8+ years building cloud-native systems at scale. SRE at Sportserve, Research Software Engineer at EcoHealth Alliance (GPU clusters for ML workloads), and founding engineer at Kustode. Deep expertise in GPU resource management, Kubernetes scheduling, and observability systems.",
     focus: [
       "GPU & ML Infrastructure",
       "Observability & SRE",
@@ -31,7 +31,7 @@ const teamMembers = [
       website: "https://espiradev.org",
       github: "https://github.com/espirado",
       linkedin: "https://linkedin.com/in/andrew-espira",
-      email: "masundeespira@gmail.com",
+      email: "aespira@vgac.cloud",
     },
     image: null, // Will use initials
   },

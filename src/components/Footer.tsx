@@ -5,22 +5,22 @@ import { Github, Twitter, Linkedin, Mail } from "lucide-react";
 
 const footerLinks = {
   Product: [
-    { name: "Features", href: "#solution" },
-    { name: "How It Works", href: "#how-it-works" },
-    { name: "Use Cases", href: "#use-cases" },
-    { name: "Pricing", href: "#pricing" },
+    { name: "Features", href: "/#solution" },
+    { name: "How It Works", href: "/#how-it-works" },
+    { name: "Use Cases", href: "/#use-cases" },
+    { name: "Pricing", href: "/pricing" },
   ],
   Resources: [
-    { name: "Blog", href: "#blog" },
+    { name: "Blog", href: "/blog" },
     { name: "Documentation", href: "/docs" },
-    { name: "API Reference", href: "/api" },
+    { name: "API Reference", href: "/api-reference" },
     { name: "Changelog", href: "/changelog" },
   ],
   Company: [
     { name: "About Us", href: "/about" },
     { name: "Careers", href: "/careers" },
-    { name: "Investors", href: "#investors" },
-    { name: "Contact", href: "#contact" },
+    { name: "Investors", href: "/#investors" },
+    { name: "Contact", href: "/#contact" },
   ],
   Legal: [
     { name: "Privacy Policy", href: "/privacy" },
