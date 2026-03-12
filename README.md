@@ -115,3 +115,8 @@ All content is hardcoded in components for easy editing:
 - Email: hello@vgac.ai
 - Investors: investors@vgac.ai
 
+
+
+
+
+

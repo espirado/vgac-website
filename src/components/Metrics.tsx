@@ -7,27 +7,27 @@ import { Clock, Zap, Target, Shield } from "lucide-react";
 const valueProps = [
   {
     icon: Clock,
-    title: "Know Before You Submit",
+    title: "Calibrated Predictions",
     description:
-      "See expected wait times before you commit to the queue. Plan your work around reality, not guesses.",
+      "AUROC 0.969, ECE 0.005. When VGAC says 70% chance of a long wait, it's right 70% of the time — verified across 11,982 GPU jobs with sub-10ms inference.",
   },
   {
     icon: Zap,
-    title: "Move Faster",
+    title: "Autonomous Agents",
     description:
-      "When teams know what to expect, they iterate more confidently. Less time waiting, more time building.",
+      "Five specialized agents — Observer, Predictor, Calibrator, Actor, Copilot — monitor your cluster and act, but only when calibration confidence exceeds the trust threshold.",
   },
   {
     icon: Target,
-    title: "Make Better Decisions",
+    title: "LLM Inference Analytics",
     description:
-      "Visibility into queue patterns helps everyone—from engineers to leadership—make smarter choices.",
+      "Purpose-built for modern AI. Prefill/decode phase analysis, KV cache fragmentation tracking, NIXL transfer observability, and disaggregation opportunity scoring.",
   },
   {
     icon: Shield,
-    title: "Reduce Frustration",
+    title: "Full Observability Platform",
     description:
-      "Replace uncertainty with clarity. No more 'when will it run?' questions or constant status checking.",
+      "12 dashboard pages, 150+ API endpoints. GPU telemetry, queue intelligence, pattern detection, HPC integration, and Slurm template generation — all in one place.",
   },
 ];
 

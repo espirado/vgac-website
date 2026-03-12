@@ -5,12 +5,12 @@ import { useRef } from "react";
 import { Check, Sparkles } from "lucide-react";
 
 const benefits = [
-  "Know exactly when every job will start running",
-  "Plan your workday around reliable predictions",
-  "Identify the best times to submit large jobs",
-  "Get alerts when queue times spike",
-  "Maximize your team's experiment velocity",
-  "Make data-driven capacity decisions",
+  "Predict queue wait times before submission with 96.9% accuracy",
+  "Detect recurring scheduling patterns and get predictive alerts",
+  "Monitor GPU health, temperature, utilization, and memory per-device",
+  "Analyze LLM inference phases: prefill/decode imbalance and KV cache efficiency",
+  "Generate optimized Slurm submission scripts from cluster state",
+  "Gate autonomous actions on calibration confidence — agents only act when trustworthy",
 ];
 
 export function Solution() {
@@ -158,4 +158,9 @@ export function Solution() {
     </section>
   );
 }
+
+
+
+
+
 

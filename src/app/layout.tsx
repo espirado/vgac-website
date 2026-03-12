@@ -21,21 +21,25 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "VGAC | Stop Waiting. Start Computing.",
+  title: "VGAC | Calibration-Aware GPU Queue Intelligence",
   description:
-    "Know exactly when your GPU jobs will run. VGAC gives your team predictable scheduling, maximized utilization, and zero wasted compute time.",
+    "Predict GPU queue wait times with 96.9% accuracy. Autonomous agents monitor, predict, calibrate, and act — gated by model confidence. Full observability for GPU clusters, LLM inference, and HPC.",
   keywords: [
     "GPU cluster",
     "queue prediction",
     "HPC",
     "AI infrastructure",
     "GPU scheduling",
-    "compute optimization",
+    "calibration",
+    "LLM inference",
+    "observability",
+    "NIXL",
+    "Slurm",
   ],
   openGraph: {
-    title: "VGAC | Stop Waiting. Start Computing.",
+    title: "VGAC | Calibration-Aware GPU Queue Intelligence",
     description:
-      "Know exactly when your GPU jobs will run. Predictable scheduling for GPU clusters.",
+      "Predict GPU queue wait times with 96.9% accuracy. Autonomous calibration-aware agents for GPU clusters.",
     type: "website",
   },
 };
@@ -57,4 +61,9 @@ export default function RootLayout({
     </html>
   );
 }
+
+
+
+
+
 

@@ -26,8 +26,8 @@ export function CTA() {
             <span className="gradient-text"> Guessing?</span>
           </h2>
           <p className="text-xl text-white/60 mb-12 max-w-2xl mx-auto">
-            Join the private beta and give your team the visibility they need.
-            Setup takes 5 minutes. First prediction in 24 hours.
+            VGAC is open source. Explore the codebase, run it locally, or deploy to your cluster.
+            Calibrated predictions from day one.
           </p>
         </motion.div>
 

@@ -31,7 +31,7 @@ const footerLinks = {
 
 const socialLinks = [
   { icon: Twitter, href: "https://twitter.com/vgac_ai", label: "Twitter" },
-  { icon: Github, href: "https://github.com/espirado", label: "GitHub" },
+  { icon: Github, href: "https://github.com/aespira/vgac", label: "GitHub" },
   { icon: Linkedin, href: "https://linkedin.com/in/andrew-espira", label: "LinkedIn" },
   { icon: Mail, href: "mailto:aespira@vgac.cloud", label: "Email" },
 ];

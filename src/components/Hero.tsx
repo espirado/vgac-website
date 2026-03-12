@@ -26,7 +26,7 @@ export function Hero() {
               <span className="relative inline-flex rounded-full h-2 w-2 bg-electric-400"></span>
             </span>
             <span className="text-sm font-medium text-electric-400">
-              Now in Private Beta
+              Calibration-Aware GPU Intelligence
             </span>
           </motion.div>
 
@@ -51,9 +51,9 @@ export function Hero() {
           >
             Your team submits a GPU job and waits... and waits.{" "}
             <span className="text-white">
-              VGAC tells you exactly when it will run
+              VGAC predicts wait times with 96.9% accuracy
             </span>
-            —so you can plan your day, not waste it.
+            , detects scheduling patterns autonomously, and generates optimized Slurm scripts — powered by calibration-aware AI agents.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -73,9 +73,14 @@ export function Hero() {
                 className="group-hover:translate-x-1 transition-transform"
               />
             </Link>
-            <Link href="#solution" className="btn-secondary">
-              Learn How It Works
-            </Link>
+            <a
+              href="https://github.com/aespira/vgac"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-secondary"
+            >
+              GitHub
+            </a>
           </motion.div>
 
           {/* Quick value props */}
@@ -88,15 +93,15 @@ export function Hero() {
             {[
               {
                 icon: Clock,
-                text: "Know wait times upfront",
+                text: "Sub-10ms wait-time predictions",
               },
               {
                 icon: TrendingUp,
-                text: "Maximize GPU utilization",
+                text: "Autonomous calibration agents",
               },
               {
                 icon: Zap,
-                text: "Ship experiments faster",
+                text: "LLM inference & HPC observability",
               },
             ].map((item, i) => (
               <div
@@ -134,57 +139,45 @@ export function Hero() {
                   </div>
                 </div>
 
+                {/* Platform Stats */}
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
+                  {[
+                    { label: "AUROC", value: "0.969", sub: "Prediction accuracy" },
+                    { label: "ECE", value: "0.005", sub: "Calibration error" },
+                    { label: "Latency", value: "<10ms", sub: "Inference speed" },
+                    { label: "Endpoints", value: "150+", sub: "API coverage" },
+                  ].map((stat, i) => (
+                    <motion.div
+                      key={i}
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.8 + i * 0.08 }}
+                      className="bg-midnight-700/50 rounded-lg p-3 border border-white/5 text-center"
+                    >
+                      <div className="text-xl font-display font-bold text-electric-400">{stat.value}</div>
+                      <div className="text-[10px] text-white/40">{stat.sub}</div>
+                    </motion.div>
+                  ))}
+                </div>
                 {/* Queue Preview */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                   {[
-                    {
-                      job: "training-llm-v3",
-                      status: "Running",
-                      eta: "2h 15m remaining",
-                      gpus: "8x H100",
-                      color: "electric",
-                    },
-                    {
-                      job: "finetune-bert-xl",
-                      status: "Queued",
-                      eta: "Starts in 2h 15m",
-                      gpus: "4x A100",
-                      color: "plasma",
-                    },
-                    {
-                      job: "inference-batch-42",
-                      status: "Queued",
-                      eta: "Starts in 4h 30m",
-                      gpus: "2x A100",
-                      color: "flame",
-                    },
+                    { job: "training-llm-v3", status: "Running", eta: "~2 min wait", gpus: "4x A100 · Calibration: 0.92", color: "electric" },
+                    { job: "finetune-bert-xl", status: "Queued", eta: "~12 min wait", gpus: "8x A100 · Risk: Medium", color: "plasma" },
+                    { job: "inference-batch-42", status: "Predicted", eta: "Starts in 4h", gpus: "2x A100 · Risk: High", color: "flame" },
                   ].map((job, i) => (
                     <motion.div
                       key={i}
                       initial={{ opacity: 0, x: 20 }}
                       animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: 0.8 + i * 0.1 }}
+                      transition={{ delay: 1.0 + i * 0.1 }}
                       className="bg-midnight-700/50 rounded-lg p-4 border border-white/5"
                     >
                       <div className="flex items-center justify-between mb-3">
-                        <span className="font-mono text-sm text-white/80">
-                          {job.job}
-                        </span>
-                        <span
-                          className={`text-xs px-2 py-1 rounded-full ${
-                            job.color === "electric"
-                              ? "bg-electric-400/20 text-electric-400"
-                              : job.color === "plasma"
-                              ? "bg-plasma-400/20 text-plasma-400"
-                              : "bg-flame-400/20 text-flame-400"
-                          }`}
-                        >
-                          {job.status}
-                        </span>
+                        <span className="font-mono text-sm text-white/80">{job.job}</span>
+                        <span className={`text-xs px-2 py-1 rounded-full ${job.color === "electric" ? "bg-electric-400/20 text-electric-400" : job.color === "plasma" ? "bg-plasma-400/20 text-plasma-400" : "bg-flame-400/20 text-flame-400"}`}>{job.status}</span>
                       </div>
-                      <div className="text-lg font-display font-semibold text-white mb-1">
-                        {job.eta}
-                      </div>
+                      <div className="text-lg font-display font-semibold text-white mb-1">{job.eta}</div>
                       <div className="text-xs text-white/40">{job.gpus}</div>
                     </motion.div>
                   ))}
@@ -197,4 +190,9 @@ export function Hero() {
     </section>
   );
 }
+
+
+
+
+
 

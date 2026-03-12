@@ -1,12 +1,17 @@
 import BlogPostClient from "./BlogPostClient";
 
-// Generate static params for all blog posts
 export function generateStaticParams() {
   return [
+    { slug: "calibration-matters" },
+    { slug: "building-vgac" },
+    { slug: "calibration-gated-autonomy" },
+    { slug: "llm-inference-observability" },
+    { slug: "vgac-v4-release" },
+    { slug: "gpu-idle-time-cost" },
     { slug: "gpu-shortage-visibility" },
-    { slug: "visibility-problem-signs" },
     { slug: "introducing-vgac" },
     { slug: "hidden-costs-uncertainty" },
+    { slug: "visibility-problem-signs" },
     { slug: "scheduling-visibility-trend" },
     { slug: "planning-with-unpredictable-queues" },
     { slug: "gpu-infrastructure-stack" },

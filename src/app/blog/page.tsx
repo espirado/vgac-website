@@ -9,46 +9,90 @@ import { Footer } from "@/components/Footer";
 
 const categories = [
   "All",
+  "Engineering",
+  "Architecture",
   "Industry",
-  "Best Practices",
   "Product",
   "Perspective",
 ];
 
-// Blog posts focused on PROBLEM, INDUSTRY, and PERSPECTIVE - no fake customer stories
 const blogPosts = [
+  {
+    category: "Engineering",
+    title: "Why Calibration Matters More Than Accuracy for GPU Scheduling",
+    excerpt:
+      "AUROC tells you if predictions are good. Calibration tells you if you can trust them enough to automate. We explain why ECE is the metric that unlocks autonomous operations.",
+    date: "Mar 10, 2026",
+    readTime: "8 min read",
+    featured: true,
+    slug: "calibration-matters",
+    tags: ["Engineering", "ML"],
+  },
+  {
+    category: "Product",
+    title: "Building VGAC: From Idea to Platform",
+    excerpt:
+      "The story of building a GPU observability platform — from a frustration with opaque queues to a 150-endpoint platform with calibration-aware agents, LLM inference analytics, and HPC integration.",
+    date: "Mar 12, 2026",
+    readTime: "10 min read",
+    featured: false,
+    slug: "building-vgac",
+    tags: ["Product", "Journey"],
+  },
+  {
+    category: "Architecture",
+    title: "Building Calibration-Gated Autonomy for AI Agents",
+    excerpt:
+      "How VGAC's five-agent architecture uses a Prediction Impact Index to decide when to act, when to recommend, and when to defer to humans.",
+    date: "Mar 5, 2026",
+    readTime: "6 min read",
+    featured: false,
+    slug: "calibration-gated-autonomy",
+    tags: ["Architecture", "Agents"],
+  },
+  {
+    category: "Industry",
+    title: "LLM Inference Needs New Observability — Not More Grafana",
+    excerpt:
+      "Prefill/decode phase imbalance, KV cache fragmentation, and NIXL transfer bottlenecks are invisible to traditional monitoring. Here's what to track instead.",
+    date: "Feb 24, 2026",
+    readTime: "7 min read",
+    featured: false,
+    slug: "llm-inference-observability",
+    tags: ["Industry", "LLM"],
+  },
+  {
+    category: "Product",
+    title: "VGAC v4: Inference Analytics, NIXL, and Slurm Templates",
+    excerpt:
+      "The latest release adds LLM phase analysis, NVIDIA NIXL transfer monitoring, HPC policy visibility, and a Slurm script generator that knows your cluster state.",
+    date: "Feb 15, 2026",
+    readTime: "4 min read",
+    featured: false,
+    slug: "vgac-v4-release",
+    tags: ["Product", "Release"],
+  },
+  {
+    category: "Perspective",
+    title: "The $250K Problem: GPU Idle Time at Scale",
+    excerpt:
+      "A 10% utilization improvement on a 100-GPU cluster saves a quarter million per year. The bottleneck isn't hardware — it's scheduling visibility.",
+    date: "Jan 30, 2026",
+    readTime: "5 min read",
+    featured: false,
+    slug: "gpu-idle-time-cost",
+    tags: ["Opinion", "Economics"],
+  },
   {
     category: "Industry",
     title: "The $50B GPU Shortage: Why Visibility Matters More Than Ever",
     excerpt:
-      "With GPU demand outpacing supply 10:1, organizations need better ways to maximize the compute they have. We explore the economics of GPU queue inefficiency and what it means for AI teams.",
+      "With GPU demand outpacing supply 10:1, organizations need better ways to maximize the compute they have.",
     date: "Dec 28, 2025",
     readTime: "7 min read",
-    featured: true,
+    featured: false,
     slug: "gpu-shortage-visibility",
     tags: ["Industry", "Market"],
-  },
-  {
-    category: "Best Practices",
-    title: "5 Signs Your GPU Cluster Has a Visibility Problem",
-    excerpt:
-      "Teams asking 'when will my job run?' constantly? Engineers working nights to avoid queues? These are symptoms of a bigger operational issue.",
-    date: "Dec 18, 2025",
-    readTime: "4 min read",
-    featured: false,
-    slug: "visibility-problem-signs",
-    tags: ["Tips", "Operations"],
-  },
-  {
-    category: "Industry",
-    title: "Why AI Labs Are Prioritizing Scheduling Visibility in 2026",
-    excerpt:
-      "From hyperscalers to startups, the smartest teams are investing in queue visibility. Here's what's driving the trend and what it means for the industry.",
-    date: "Dec 12, 2025",
-    readTime: "6 min read",
-    featured: false,
-    slug: "scheduling-visibility-trend",
-    tags: ["Industry", "Trends"],
   },
   {
     category: "Product",
@@ -65,44 +109,11 @@ const blogPosts = [
     category: "Perspective",
     title: "The Hidden Costs of 'I Don't Know When It Will Run'",
     excerpt:
-      "Queue uncertainty doesn't just waste compute—it wastes engineer time, delays projects, and erodes team morale. We break down the true cost.",
+      "Queue uncertainty doesn't just waste compute — it wastes engineer time, delays projects, and erodes team morale.",
     date: "Nov 28, 2025",
     readTime: "5 min read",
     featured: false,
     slug: "hidden-costs-uncertainty",
-    tags: ["Opinion", "Culture"],
-  },
-  {
-    category: "Best Practices",
-    title: "Planning Experiments When Queue Times Are Unpredictable",
-    excerpt:
-      "Practical strategies for ML teams to maintain velocity even when cluster queues are a black box. Spoiler: there's a better way.",
-    date: "Nov 20, 2025",
-    readTime: "4 min read",
-    featured: false,
-    slug: "planning-with-unpredictable-queues",
-    tags: ["Tips", "Productivity"],
-  },
-  {
-    category: "Industry",
-    title: "The GPU Infrastructure Stack: Where Visibility Fits",
-    excerpt:
-      "Schedulers, orchestrators, and monitoring tools—but what about knowing when jobs will actually run? The missing layer in GPU infrastructure.",
-    date: "Nov 15, 2025",
-    readTime: "5 min read",
-    featured: false,
-    slug: "gpu-infrastructure-stack",
-    tags: ["Industry", "Infrastructure"],
-  },
-  {
-    category: "Perspective",
-    title: "Why GPU Queues Should Be Transparent",
-    excerpt:
-      "Shared resources work better when everyone has visibility. The case for open, predictable GPU scheduling.",
-    date: "Nov 5, 2025",
-    readTime: "4 min read",
-    featured: false,
-    slug: "transparent-queues",
     tags: ["Opinion", "Culture"],
   },
 ];

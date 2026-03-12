@@ -12,7 +12,7 @@ const navLinks = [
   { name: "Use Cases", href: "/#use-cases" },
   { name: "Blog", href: "/blog" },
   { name: "Team", href: "/#team" },
-  { name: "Investors", href: "/#investors" },
+  { name: "GitHub", href: "https://github.com/aespira/vgac" },
 ];
 
 export function Navigation() {

@@ -8,34 +8,34 @@ const steps = [
   {
     icon: Plug,
     number: "01",
-    title: "Connect Your Cluster",
+    title: "Collect Telemetry",
     description:
-      "Simple integration with your existing scheduler. Slurm, Kubernetes, PBS — we support them all. No changes to your workflow.",
-    detail: "5 minute setup",
+      "VGAC ingests GPU metrics, job lifecycle events, and queue state from Slurm, Kubernetes, or PBS. Data flows into ClickHouse for real-time analytics.",
+    detail: "Slurm · K8s · PBS",
   },
   {
     icon: Brain,
     number: "02",
-    title: "Learn Your Patterns",
+    title: "Predict & Calibrate",
     description:
-      "VGAC analyzes your cluster's historical behavior, job patterns, and resource utilization to build a predictive model unique to your environment.",
-    detail: "24-48 hours to calibrate",
+      "A calibrated ML model (AUROC 0.969) predicts wait times in under 10ms. The Calibrator agent continuously monitors ECE drift and triggers recalibration when needed.",
+    detail: "ECE 0.005 calibration",
   },
   {
     icon: Bell,
     number: "03",
-    title: "Get Predictions",
+    title: "Detect & Alert",
     description:
-      "Every job submission instantly receives a predicted start time. Your team knows exactly what to expect — before they even hit submit.",
-    detail: "Real-time predictions",
+      "Pattern detection identifies recurring contention (peak-hour GPU spikes, cascading delays). Predictive alerts fire before problems hit — not after.",
+    detail: "Proactive alerting",
   },
   {
     icon: BarChart3,
     number: "04",
-    title: "Optimize & Scale",
+    title: "Act Autonomously",
     description:
-      "Use insights to identify bottlenecks, plan capacity, and help your team submit jobs at optimal times. Watch utilization improve.",
-    detail: "Continuous improvement",
+      "The Actor agent executes scaling and scheduling decisions — but only when calibration confidence exceeds the trust threshold. Below that, it recommends and defers to humans.",
+    detail: "Calibration-gated autonomy",
   },
 ];
 
@@ -119,4 +119,9 @@ export function HowItWorks() {
     </section>
   );
 }
+
+
+
+
+
 
