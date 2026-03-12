@@ -5,12 +5,12 @@ import { useRef } from "react";
 import { Check, Sparkles } from "lucide-react";
 
 const benefits = [
-  "Predict queue wait times before submission with 96.9% accuracy",
-  "Detect recurring scheduling patterns and get predictive alerts",
-  "Monitor GPU health, temperature, utilization, and memory per-device",
-  "Analyze LLM inference phases: prefill/decode imbalance and KV cache efficiency",
-  "Generate optimized Slurm submission scripts from cluster state",
-  "Gate autonomous actions on calibration confidence — agents only act when trustworthy",
+  "See expected wait times before you submit — plan your day, not your refreshes",
+  "Understand why a job is stuck: queue depth, partition capacity, resource contention",
+  "Get alerts when queue patterns change — peak hours, cascading delays, burst submissions",
+  "Monitor every GPU: utilization, temperature, memory, health score per device",
+  "Auto-generate optimized Slurm scripts tailored to your cluster's current state",
+  "One dashboard for ML engineers, platform teams, and leadership — no more Grafana sprawl",
 ];
 
 export function Solution() {

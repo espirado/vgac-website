@@ -8,34 +8,34 @@ const steps = [
   {
     icon: Plug,
     number: "01",
-    title: "Collect Telemetry",
+    title: "Connect Your Cluster",
     description:
-      "VGAC ingests GPU metrics, job lifecycle events, and queue state from Slurm, Kubernetes, or PBS. Data flows into ClickHouse for real-time analytics.",
+      "Point VGAC at your Slurm, Kubernetes, or PBS scheduler. It starts collecting GPU metrics, job events, and queue state automatically. No code changes required.",
     detail: "Slurm · K8s · PBS",
   },
   {
     icon: Brain,
     number: "02",
-    title: "Predict & Calibrate",
+    title: "Get Predictions",
     description:
-      "A calibrated ML model (AUROC 0.969) predicts wait times in under 10ms. The Calibrator agent continuously monitors ECE drift and triggers recalibration when needed.",
-    detail: "ECE 0.005 calibration",
+      "Before you submit, see how long your job will wait. VGAC learns your cluster's patterns — which partitions are busy, when the quiet hours are, which job sizes move fastest.",
+    detail: "Pre-submit predictions",
   },
   {
     icon: Bell,
     number: "03",
-    title: "Detect & Alert",
+    title: "Get Warned Early",
     description:
-      "Pattern detection identifies recurring contention (peak-hour GPU spikes, cascading delays). Predictive alerts fire before problems hit — not after.",
-    detail: "Proactive alerting",
+      "VGAC spots scheduling problems before they cascade. Peak-hour contention building up? Memory pressure on a node? You'll know before the queue backs up — not after.",
+    detail: "Predictive alerts",
   },
   {
     icon: BarChart3,
     number: "04",
-    title: "Act Autonomously",
+    title: "Optimize & Act",
     description:
-      "The Actor agent executes scaling and scheduling decisions — but only when calibration confidence exceeds the trust threshold. Below that, it recommends and defers to humans.",
-    detail: "Calibration-gated autonomy",
+      "See right-sizing suggestions, alternative placements, and auto-generated Slurm scripts. Platform teams get capacity forecasts and utilization insights to make data-driven decisions.",
+    detail: "Actionable insights",
   },
 ];
 

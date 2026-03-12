@@ -26,7 +26,7 @@ export function Hero() {
               <span className="relative inline-flex rounded-full h-2 w-2 bg-electric-400"></span>
             </span>
             <span className="text-sm font-medium text-electric-400">
-              Calibration-Aware GPU Intelligence
+              GPU Queue Intelligence for HPC & AI Teams
             </span>
           </motion.div>
 
@@ -49,11 +49,11 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-xl md:text-2xl text-white/60 max-w-3xl mx-auto mb-12 font-body leading-relaxed"
           >
-            Your team submits a GPU job and waits... and waits.{" "}
+            Your team submits a GPU job and has no idea when it'll run.{" "}
             <span className="text-white">
-              VGAC predicts wait times with 96.9% accuracy
-            </span>
-            , detects scheduling patterns autonomously, and generates optimized Slurm scripts — powered by calibration-aware AI agents.
+              VGAC tells you why jobs are stuck, when they'll start,
+            </span>{" "}
+            and how to get them running faster — so you stop refreshing status pages and start shipping.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -93,15 +93,15 @@ export function Hero() {
             {[
               {
                 icon: Clock,
-                text: "Sub-10ms wait-time predictions",
+                text: "Know wait times before you submit",
               },
               {
                 icon: TrendingUp,
-                text: "Autonomous calibration agents",
+                text: "See why the queue is slow",
               },
               {
                 icon: Zap,
-                text: "LLM inference & HPC observability",
+                text: "Works with Slurm, K8s, and PBS",
               },
             ].map((item, i) => (
               <div
@@ -142,10 +142,10 @@ export function Hero() {
                 {/* Platform Stats */}
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
                   {[
-                    { label: "AUROC", value: "0.969", sub: "Prediction accuracy" },
-                    { label: "ECE", value: "0.005", sub: "Calibration error" },
-                    { label: "Latency", value: "<10ms", sub: "Inference speed" },
-                    { label: "Endpoints", value: "150+", sub: "API coverage" },
+                    { label: "Avg Wait", value: "4.2m", sub: "Predicted vs actual" },
+                    { label: "Queue Depth", value: "2,847", sub: "Jobs tracked" },
+                    { label: "GPU Util", value: "78%", sub: "Across 64 GPUs" },
+                    { label: "Alerts", value: "3", sub: "Active patterns" },
                   ].map((stat, i) => (
                     <motion.div
                       key={i}
@@ -162,9 +162,9 @@ export function Hero() {
                 {/* Queue Preview */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                   {[
-                    { job: "training-llm-v3", status: "Running", eta: "~2 min wait", gpus: "4x A100 · Calibration: 0.92", color: "electric" },
-                    { job: "finetune-bert-xl", status: "Queued", eta: "~12 min wait", gpus: "8x A100 · Risk: Medium", color: "plasma" },
-                    { job: "inference-batch-42", status: "Predicted", eta: "Starts in 4h", gpus: "2x A100 · Risk: High", color: "flame" },
+                    { job: "training-llm-v3", status: "Running", eta: "~2 min left", gpus: "4x A100 · gpu-batch partition", color: "electric" },
+                    { job: "finetune-bert-xl", status: "Queued", eta: "~12 min wait", gpus: "8x A100 · 3 jobs ahead", color: "plasma" },
+                    { job: "inference-batch-42", status: "Waiting", eta: "Starts ~4:15 PM", gpus: "2x A100 · Try off-peak", color: "flame" },
                   ].map((job, i) => (
                     <motion.div
                       key={i}

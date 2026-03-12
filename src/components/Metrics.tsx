@@ -7,27 +7,27 @@ import { Clock, Zap, Target, Shield } from "lucide-react";
 const valueProps = [
   {
     icon: Clock,
-    title: "Calibrated Predictions",
+    title: "Know Before You Submit",
     description:
-      "AUROC 0.969, ECE 0.005. When VGAC says 70% chance of a long wait, it's right 70% of the time — verified across 11,982 GPU jobs with sub-10ms inference.",
+      "See expected wait times before your job enters the queue. VGAC tells you if now is a good time to submit, or if you should wait an hour and skip a 3-hour queue.",
   },
   {
     icon: Zap,
-    title: "Autonomous Agents",
+    title: "See Why the Queue Is Slow",
     description:
-      "Five specialized agents — Observer, Predictor, Calibrator, Actor, Copilot — monitor your cluster and act, but only when calibration confidence exceeds the trust threshold.",
+      "Not just 'your job is pending.' VGAC explains the bottleneck: is it queued behind large jobs? Is the partition at capacity? Are other users holding GPUs they're not using?",
   },
   {
     icon: Target,
-    title: "LLM Inference Analytics",
+    title: "Right-Size Your Requests",
     description:
-      "Purpose-built for modern AI. Prefill/decode phase analysis, KV cache fragmentation tracking, NIXL transfer observability, and disaggregation opportunity scoring.",
+      "Requesting 8 GPUs when you only need 4 doubles your wait time and blocks everyone else. VGAC analyzes your job and suggests the fastest path to getting it running.",
   },
   {
     icon: Shield,
-    title: "Full Observability Platform",
+    title: "Alerts Before Problems Hit",
     description:
-      "12 dashboard pages, 150+ API endpoints. GPU telemetry, queue intelligence, pattern detection, HPC integration, and Slurm template generation — all in one place.",
+      "VGAC detects scheduling patterns — like peak-hour contention or cascading delays — and warns you before the queue backs up. Stop firefighting, start planning.",
   },
 ];
 
@@ -53,11 +53,11 @@ export function Metrics() {
             The Value
           </span>
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            What Changes With
-            <span className="gradient-text"> Visibility</span>
+            Stop Guessing.
+            <span className="gradient-text"> Start Knowing.</span>
           </h2>
           <p className="text-xl text-white/60 max-w-2xl mx-auto">
-            When teams can see what's happening in their cluster, everything improves.
+            Your researchers shouldn't need to ask Slack when their job will run. VGAC gives them the answer.
           </p>
         </motion.div>
 
